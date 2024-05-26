@@ -1,9 +1,9 @@
-package hello
+package blog
 
 import (
 	autocliv1 "cosmossdk.io/api/cosmos/autocli/v1"
 
-	modulev1 "hello/api/hello/hello"
+	modulev1 "blog/api/blog/blog"
 )
 
 // AutoCLIOptions implements the autocli.HasAutoCLIConfig interface.
@@ -17,13 +17,6 @@ func (am AppModule) AutoCLIOptions() *autocliv1.ModuleOptions {
 					Use:       "params",
 					Short:     "Shows the parameters of the module",
 				},
-				{
-					RpcMethod:      "Hello",
-					Use:            "hello",
-					Short:          "Query hello",
-					PositionalArgs: []*autocliv1.PositionalArgDescriptor{},
-				},
-
 				// this line is used by ignite scaffolding # autocli/query
 			},
 		},
